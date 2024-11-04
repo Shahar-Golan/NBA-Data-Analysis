@@ -5,27 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55c90f99-5536-48eb-9a77-ea3227f25a02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/NBA.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dataset_Creation/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dataset_Creation/fix_files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dataset_Creation/main_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/analyze_calculation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/data_processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/find_path.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/fix_errors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/machine_learning_screen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/main_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/options_screen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/season_selection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Machine_Learning/feature_selection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Machine_Learning/kinds_of_ML_models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Machine_Learning/model_training.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other_files/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +178,7 @@
       <workItem from="1729946964823" duration="8483000" />
       <workItem from="1729966697121" duration="481000" />
       <workItem from="1730026736317" duration="3426000" />
-      <workItem from="1730048819577" duration="128478000" />
+      <workItem from="1730048819577" duration="129384000" />
     </task>
     <servers />
   </component>
