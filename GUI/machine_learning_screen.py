@@ -148,7 +148,7 @@ class MachineLearningScreen(tk.Frame):
         instruction_label.pack(pady=(10, 0))
 
     def load_hero_images(self):
-        pass  # Placeholder for image loading
+        pass  # Simplified for now
 
     def run_model(self, model_code, model_name):
         print(f"Running model: {model_name} with code: {model_code}")
@@ -185,7 +185,7 @@ class MachineLearningScreen(tk.Frame):
             # Model name
             model_label = tk.Label(
                 results_container,
-                text=f"{model_name} - Results",
+                text=f" {model_name} - Results",
                 font=("Arial", 16, "bold"),
                 fg=self.colors['accent'],
                 bg=self.colors['surface']
@@ -270,6 +270,7 @@ class MachineLearningScreen(tk.Frame):
                 text=f"Error: {str(e)}",
                 font=("Arial", 12),
                 fg="#dc143c",
-                bg=self.colors['surface']
+                bg=self.colors['surface'],
+                wraplength=400
             )
             error_label.pack(expand=True)

@@ -188,7 +188,7 @@ class OptionsScreen(tk.Frame):
         button.bind("<Leave>", on_leave)
 
     def create_visualization_area(self, parent):
-        # Visualization card
+        # Visualization card with increased height
         viz_card = tk.Frame(parent, bg=self.colors['surface'], relief='raised', bd=1)
         viz_card.pack(fill=tk.BOTH, expand=True, pady=(0, 25))
         
@@ -205,9 +205,10 @@ class OptionsScreen(tk.Frame):
         )
         viz_title.pack(anchor='w')
         
-        # Graph area
-        self.graph_frame = tk.Frame(viz_card, bg=self.colors['surface'])
-        self.graph_frame.pack(fill=tk.BOTH, expand=True, padx=30, pady=(20, 30))
+        # Graph area with extra padding and minimum height
+        self.graph_frame = tk.Frame(viz_card, bg=self.colors['surface'], height=500)
+        self.graph_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=(15, 20))
+        self.graph_frame.pack_propagate(False)  # Maintain minimum height
         
         # Initial placeholder
         self.create_placeholder_visualization()
@@ -282,9 +283,9 @@ class OptionsScreen(tk.Frame):
         for widget in self.graph_frame.winfo_children():
             widget.destroy()
 
-        # Create a modern plot
+        # Create a modern plot with optimal sizing for full visibility
         plt.style.use('dark_background')
-        fig, ax = plt.subplots(figsize=(8, 5))
+        fig, ax = plt.subplots(figsize=(12, 7))  # Larger size for better text visibility
         fig.patch.set_facecolor(self.colors['surface'])
         ax.set_facecolor(self.colors['background'])
         
@@ -299,27 +300,29 @@ class OptionsScreen(tk.Frame):
             messagebox.showerror("Data Error", "Unsupported data format for plotting.")
             return
 
-        # Styling
-        ax.set_title(title, fontsize=16, fontweight='bold', color=self.colors['text_primary'], pad=20)
-        ax.set_xlabel("Tier", fontsize=12, color=self.colors['text_secondary'])
-        ax.set_ylabel("Stat Value", fontsize=12, color=self.colors['text_secondary'])
+        # Enhanced styling with generous spacing for full text visibility
+        ax.set_title(title, fontsize=20, fontweight='bold', color=self.colors['text_primary'], pad=30)
+        ax.set_xlabel("Tier", fontsize=16, color=self.colors['text_secondary'], labelpad=15)
+        ax.set_ylabel("Stat Value", fontsize=16, color=self.colors['text_secondary'], labelpad=15)
         
         ax.set_xticks([1, 2, 3])
-        ax.tick_params(colors=self.colors['text_secondary'])
+        ax.tick_params(colors=self.colors['text_secondary'], labelsize=14)
         ax.grid(True, alpha=0.3, color=self.colors['text_secondary'])
         
-        # Add value labels on bars
+        # Add value labels on bars with proper spacing
         for bar in bars:
             height = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width()/2., height + height*0.02,
+            ax.text(bar.get_x() + bar.get_width()/2., height + height*0.03,
                    f'{height:.1f}', ha='center', va='bottom', 
-                   color=self.colors['text_primary'], fontweight='bold')
+                   color=self.colors['text_primary'], fontweight='bold', fontsize=14)
 
-        plt.tight_layout()
+        # Generous margins to ensure no text cutoff
+        plt.subplots_adjust(left=0.12, right=0.95, top=0.82, bottom=0.18)
+        plt.tight_layout(pad=2.0)  # Additional padding
 
-        # Display in tkinter
+        # Display in tkinter with proper canvas sizing
         canvas = FigureCanvasTkAgg(fig, master=self.graph_frame)
         canvas.draw()
-        canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+        canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
         
         plt.close(fig)  # Prevent memory leaks
