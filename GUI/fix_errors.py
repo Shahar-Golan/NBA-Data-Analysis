@@ -32,7 +32,3 @@ def analyze_player_performance(season, player_name):
     # Display results (for now, print to verify)
     print(f"Averages for {player_name} in season {season}:\n{tier_avg}")
 
-# Example usage:
-season = "2002-03"
-player_name = "Kobe Bryant"
-analyze_player_performance(season, player_name)

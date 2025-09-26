@@ -1,5 +1,10 @@
 import tkinter as tk
 from tkinter import messagebox
+import sys
+import os
+
+# Add parent directory to Python path to access Machine_Learning module
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from Machine_Learning.model_training import run_machine_learning_model
 

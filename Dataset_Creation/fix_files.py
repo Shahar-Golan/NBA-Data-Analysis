@@ -1,7 +1,7 @@
 
-from add_teamID_col import add_team_id_to_players
-from tier_selection import adjust_tiers
-from create_top_100_players import top_100_players
+from .add_teamID_col import add_team_id_to_players
+from .tier_selection import adjust_tiers
+from .create_top_100_players import top_100_players
 
 # Perform data modifications
 add_team_id_to_players(r"C:\Users\Shahar Golan\PycharmProjects\NBA\All_Seasons\2002-03\player_game_logs_2002-03_regular_season.csv",

@@ -3,7 +3,7 @@ import os
 
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-from season_create import validate_season_format
+from Dataset_Creation.season_create import validate_season_format
 from Machine_Learning.feature_selection import activate_rolling_data
 from Machine_Learning.kinds_of_ML_models import return_model
 
@@ -69,12 +69,6 @@ def get_train_test_df(regular_season_df, playoff_df):
     train_df, final_test_df = split_train_test(df)
 
     return train_df, final_test_df, predictions_df
-
-
-
-
-
-
 
 def run_machine_learning_model(season, model_function=""):
     regular_season_df, playoff_df = get_data_for_season(season)

@@ -1,13 +1,13 @@
 import os
 from datetime import datetime
-from player_logs import fetch_and_save_game_logs
-from team_logs import  fetch_and_save_team_game_logs
-from player_profile import fetch_and_save_player_profiles
-from advanced_stats import fetch_and_save_advanced_player_stats
-from awards import fetch_and_save_player_awards
-from add_teamID_col import add_team_id_to_players
-from tier_selection import adjust_tiers
-from create_top_100_players import top_100_players
+from .player_logs import fetch_and_save_game_logs
+from .team_logs import fetch_and_save_team_game_logs
+from .player_profile import fetch_and_save_player_profiles
+from .advanced_stats import fetch_and_save_advanced_player_stats
+from .awards import fetch_and_save_player_awards
+from .add_teamID_col import add_team_id_to_players
+from .tier_selection import adjust_tiers
+from .create_top_100_players import top_100_players
 
 
 def validate_season_format(season):

@@ -26,7 +26,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/Shahar-Golan/NBA-Data-Analysis.git
+git clone https://github.com/Shahar-Golan/NBA-Data-Analysis-Project.git
 cd NBA-Data-Analysis-Project
 Install required libraries:
 

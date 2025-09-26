@@ -3,7 +3,7 @@ import time
 import os
 
 from nba_api.stats.endpoints import  playerawards
-from player_logs import fetch_active_players
+from .player_logs import fetch_active_players
 
 
 def fetch_and_save_player_awards(season="", save_path=""):

@@ -3,7 +3,7 @@ import pandas as pd
 import time
 import os
 
-from player_logs import fetch_active_players
+from .player_logs import fetch_active_players
 
 
 def fetch_and_save_player_profiles(season, save_path=""):
